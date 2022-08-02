@@ -33,13 +33,13 @@ body {
 .grid-item {
   display: inline-block;
   height: 259px;
-
   overflow: hidden;
   text-align: center;
   width: 400px;
 }
 .grid-item img {
   width: 100%;
+  margin: 10px;
   height: auto;
   transition: 0.9s;
 }
@@ -77,7 +77,6 @@ body {
   color: #b6b6b6;
   text-decoration: none;
   padding: 20px;
-  
 }
 .filters li a:hover {
   color: #fff;
@@ -94,7 +93,6 @@ body {
   box-shadow: -1px 1px 11px rgba(0, 0, 0, 0.4);
   padding: 10px 25px;
 }
-
 
 .isotope-pager a {
   margin: 6px 1px;
