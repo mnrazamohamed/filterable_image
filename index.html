@@ -6,81 +6,101 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--CSS file goes here-->
     <link rel="stylesheet" href="./css/style.css" />
-    <title>Image Filter</title>
+    <title>Filter Gallery</title>
     <link rel="icon" type="image/x-icon" href="./images/favicon1.ico" />
     <link href="./images/favicon1.ico" rel="icon" />
   </head>
   <body>
-    <section class="gallery">
-      <div class="container">
-        <div class="row">
-          <div class="gallery-filter">
-            <span class="filter-item active" data-filter="all">all</span>
-            <span class="filter-item" data-filter="car">Car</span>
-            <span class="filter-item" data-filter="bike">Bike</span>
-            <span class="filter-item" data-filter="bicycle">Bicycle</span>
-          </div>
-        </div>
+    <!--title-->
+    <div class="header">
+      <h1>Filter Gallery</h1>
+      <p>Filter Gallery With Responsive, Pagination, Popup.</p>
+    </div>
+    <!--title end-->
 
-        <div class="row">
-          <div class="gallery-item car">
-            <div class="gallery-item-inner">
-              <img src="./images/Car/car01.jpg" alt="car01" />
-            </div>
-          </div>
+    <div class="filters filter-button-group">
+      <ul>
+        <li class="active"><a href="javascript:void(0);" data-filter="*">All</a></li>
+        <li><a href="javascript:void(0);" data-filter="car">Car</a></li>
+        <li><a href="javascript:void(0);" data-filter="bike">Bike</a></li>
+        <li><a href="javascript:void(0);" data-filter="bicycle">Bicycle</a></li>
+      </ul>
+    </div>
 
-          <div class="gallery-item bike">
-            <div class="gallery-item-inner">
-              <img src="./images/Bike/bike01.jpg" alt="bike01" />
-            </div>
-          </div>
-
-          <div class="gallery-item car">
-            <div class="gallery-item-inner">
-              <img src="./images/Car/car02.jpg" alt="car02" />
-            </div>
-          </div>
-
-          <div class="gallery-item bike">
-            <div class="gallery-item-inner">
-              <img src="./images/Bike/bike02.jpg" alt="bike02" />
-            </div>
-          </div>
-
-          <div class="gallery-item bicycle">
-            <div class="gallery-item-inner">
-              <img src="./images/Bicycle/bicycle02.jpg" alt="bicycle02" />
-            </div>
-          </div>
-
-          <div class="gallery-item bike">
-            <div class="gallery-item-inner">
-              <img src="./images/Bike/bike03.jpg" alt="bike03" />
-            </div>
-          </div>
-
-          <div class="gallery-item bicycle">
-            <div class="gallery-item-inner">
-              <img src="./images/Bicycle/bicycle01.jpg" alt="bicycle01" />
-            </div>
-          </div>
-
-          <div class="gallery-item car">
-            <div class="gallery-item-inner">
-              <img src="./images/Car/car03.jpg" alt="car03" />
-            </div>
-          </div>
-
-          <div class="gallery-item bicycle">
-            <div class="gallery-item-inner">
-              <img src="./images/Bicycle/bicycle03.jpg" alt="bicycle03" />
-            </div>
-          </div>
-        </div>
+    <div id="container" class="isotope">
+      
+      <div class="grid-item" data-filter="bike">
+        <a class="popupimg" href="./images/Bike/bike01.jpg">
+          <img src="./images/Bike/bike01.jpg" />
+        </a>
+        <div class="overlay">Bike</div>
       </div>
-    </section>
 
-    <!--JS file goes here-->
+      <div class="grid-item" data-filter="car">
+        <a class="popupimg" href="./images/Car/car01.jpg">
+          <img src="./images/Car/car01.jpg" />
+        </a>
+        <div class="overlay">Car</div>
+      </div>
+
+      <div class="grid-item" data-filter="bike">
+        <a class="popupimg" href="./images/Bike/bike02.jpg">
+          <img src="./images/Bike/bike02.jpg" />
+        </a>
+        <div class="overlay">Bike</div>
+      </div>
+
+      <div class="grid-item" data-filter="bicycle">
+        <a class="popupimg" href="./images/Bicycle/bicycle01.jpg">
+          <img src="./images/Bicycle/bicycle01.jpg" />
+        </a>
+        <div class="overlay">Bicycle</div>
+      </div>
+
+      <div class="grid-item" data-filter="car">
+        <a class="popupimg" href="./images/Car/car02.jpg">
+          <img src="./images/Car/car02.jpg" />
+        </a>
+        <div class="overlay">Car</div>
+      </div>
+
+      <div class="grid-item" data-filter="bike">
+        <a class="popupimg" href="./images/Bike/bike03.jpg">
+          <img src="./images/Bike/bike03.jpg" />
+        </a>
+        <div class="overlay">Bike</div>
+      </div>
+
+      <div class="grid-item" data-filter="bicycle">
+        <a class="popupimg" href="./images/Bicycle/bicycle02.jpg">
+          <img src="./images/Bicycle/bicycle02.jpg" />
+        </a>
+        <div class="overlay">Bicycle</div>
+      </div>
+
+      <div class="grid-item" data-filter="car">
+        <a class="popupimg" href="./images/Car/car03.jpg">
+          <img src="./images/Car/car03.jpg" />
+        </a>
+        <div class="overlay">Car</div>
+      </div> 
+
+      <div class="grid-item" data-filter="bicycle">
+        <a class="popupimg" href="./images/Bicycle/bicycle03.jpg" >
+          <img src="./images/Bicycle/bicycle03.jpg" />
+        </a> 
+      <div class="overlay">Bicycle</div>
+    </div>
+
+    <div
+      class="isotope-pager"
+      style="padding-top: 15px; text-align: center"
+    ></div>
+
+    <!-- partial -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.min.js"></script>
     <script src="./js/script.js"></script>
   </body>
 </html>
